@@ -41,6 +41,9 @@ void toggle_led() { // Function to enable timer and toggle led state
 
 // Callback function to handle button press
 void button_pressed_callback() {
+	
+		// Disable timer to keep LED state steady
+		disable_timer(LED_STATE);
     if (LED_STATE == 1) { 
         leds_set(!LED_STATE,0, 0); // Turn on the LED
 				
