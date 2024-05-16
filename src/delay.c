@@ -22,7 +22,7 @@ void delay_us(unsigned int us) {
 	delay_cycles(us * (SystemCoreClock / 1000000));
 }
 
-__asm void delay_cycles(unsigned int cycles) {
+__ASM void delay_cycles(unsigned int cycles) {
 	LSRS r0, #2
 	BEQ done
 loop
